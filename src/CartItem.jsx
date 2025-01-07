@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { removeItem, updateQuantity, addItem } from './CartSlice';
+import {addItem, removeItem, updateQuantity } from './CartSlice';
 import './CartItem.css';
 
 const CartItem = ({ onContinueShopping,handleAddToCart }) => {
@@ -53,7 +53,7 @@ const CartItem = ({ onContinueShopping,handleAddToCart }) => {
         });
         return totalItems
     };
-    
+
     return (
         <div className="cart-container">
         <h2 style={{ color: 'black' }}>Total Cart Amount: ${calculateTotalAmount()}</h2>
