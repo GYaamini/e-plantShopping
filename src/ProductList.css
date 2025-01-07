@@ -21,6 +21,10 @@ body {
     font-size: 20px;
 }
 
+.navbar-center {
+    text-align: center;
+}
+
 .navbar .ul {
     display: flex;
     justify-content: space-between;
@@ -37,6 +41,27 @@ body {
     font-size: 30px;
     text-decoration: none;
    
+}
+
+.navbar .plants-link {
+        position: absolute; /* Keep position absolute */
+        left: 50%; /* Center horizontally */
+        top: 50%; /* Center vertically */
+        transform: translate(-50%, -50%); /* Adjust for centering */
+    }
+
+.category-title {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 10px ;
+}
+
+.category-title {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 10px;
 }
 
 /* Product Grid */
@@ -86,7 +111,7 @@ body {
     margin-bottom: 10px;
 }
 
-.product-price {
+.product-cost {
     color: #e74c3c;
     font-size: 1.2rem;
     margin-bottom: 10px;
@@ -194,6 +219,18 @@ body {
         flex: 1 1 calc(50% - 20px); /* Adjust width for 2 cards per row with 20px gap on smaller screens */
         max-width: calc(50% - 20px); /* Adjust max-width for 2 cards per row with 20px gap on smaller screens */
     }
+    .navbar .plants-link {
+        position: absolute; /* Keep position absolute */
+        left: 50%; /* Center horizontally */
+        top: 50%; /* Center vertically */
+        transform: translate(-50%, -50%); /* Adjust for centering */
+    }
+    .navbar {
+        flex-direction: column; /* Change flex direction to stack items vertically */
+        align-items: center; /* Align items to the center of the container */
+        position: static; /* Reset position */
+    }
+    
 }
 /* ProductList.css */
 
