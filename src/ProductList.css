@@ -19,10 +19,16 @@ body {
     justify-content: space-between;
     align-items: center;
     font-size: 20px;
+    position: relative;
 }
 
 .navbar-center {
     text-align: center;
+}
+
+.navbar-right {
+    display: flex;
+    align-items: center;
 }
 
 .navbar .ul {
@@ -43,25 +49,23 @@ body {
    
 }
 
-.navbar .plants-link {
-        position: absolute; /* Keep position absolute */
-        left: 50%; /* Center horizontally */
-        top: 50%; /* Center vertically */
-        transform: translate(-50%, -50%); /* Adjust for centering */
-    }
-
-.category-title {
-    text-align: center;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    padding: 10px ;
+.navbar.plants-link {
+    margin-left: 50%;
+    margin-right: 50%;
+    top: 0; 
+    bottom: 0;
+    align-items: center;
 }
 
 .category-title {
     text-align: center;
+    margin: auto;
     margin-top: 20px;
     margin-bottom: 20px;
     padding: 10px;
+    border-bottom: 2px solid #000000;
+    border-top: 2px solid #000000;
+    width: 30%;
 }
 
 /* Product Grid */
@@ -211,7 +215,6 @@ body {
     border-left: none;
     border-right: none;
 
-    
 }
 /* Add Media Query for responsiveness */
 @media (max-width: 768px) {
@@ -219,11 +222,12 @@ body {
         flex: 1 1 calc(50% - 20px); /* Adjust width for 2 cards per row with 20px gap on smaller screens */
         max-width: calc(50% - 20px); /* Adjust max-width for 2 cards per row with 20px gap on smaller screens */
     }
-    .navbar .plants-link {
-        position: absolute; /* Keep position absolute */
-        left: 50%; /* Center horizontally */
-        top: 50%; /* Center vertically */
-        transform: translate(-50%, -50%); /* Adjust for centering */
+    .navbar.plants-link {
+        margin-left: 50%;
+        margin-right: 50%;
+        top: 0; 
+        bottom: 0;
+        align-items: center;
     }
     .navbar {
         flex-direction: column; /* Change flex direction to stack items vertically */
@@ -252,9 +256,10 @@ body {
     background-color: #45a049;
   }
   
-  .product-button.added-to-cart {
+  .product-button.added_to_cart {
     background-color: grey; /* Grey when product is added */
   }
+
   @media (max-width: 1200px) {
     .product-card {
       flex: 1 1 calc(33.33% - 20px); /* Adjust width for 3 cards per row with 20px gap on medium screens */

@@ -237,6 +237,7 @@ function ProductList() {
     color: 'white',
     fontSize: '30px',
     textDecoration: 'none',
+    margin: '0',
    }
    const styleB={
     color: 'white',
@@ -260,7 +261,7 @@ const handleContinueShopping = (e) => {
 };
   
 const handleAddToCart = (product) => {
-    const isAdded = addedToCart[product.name] || false;
+    const isAdded = addedToCart[product.name];
 
     if (isAdded) {
         dispatch(removeItem(product));
@@ -328,7 +329,7 @@ useEffect(() => {
                     <div className="product-title">{plant.name}</div>
                     <div className="product-description">{plant.description}</div>
                     <div className="product-cost">{plant.cost}</div>
-                    <button className={`product-button Rs.{addedToCart[plant.name] ? 'added-to-cart' : ''}`} 
+                    <button className={`product-button ${addedToCart[plant.name] ? 'added_to_cart' : ''}`} 
                         onClick={() => handleAddToCart(plant)}>
                     {addedToCart[plant.name] ? 'Added to Cart' : 'Add to Cart'}
                   </button>
